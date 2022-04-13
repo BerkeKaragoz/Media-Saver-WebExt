@@ -1,0 +1,10 @@
+{
+  "name": "media-saver-webext",
+  "description": "Save any media source!",
+  "version": "0.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "^0.0.180"
+  }
+}

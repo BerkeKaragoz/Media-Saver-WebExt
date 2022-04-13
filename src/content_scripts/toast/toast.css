@@ -1,0 +1,90 @@
+#mediasaver-webext-toast {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif,
+    Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  color-scheme: dark;
+  visibility: hidden;
+  background-color: #333;
+  color: aliceblue;
+  text-align: center;
+  border-radius: 1em;
+  padding: 1em;
+  position: fixed;
+  z-index: 2147483646;
+  left: 50%;
+  top: 4em;
+  transform: translateX(-50%);
+}
+
+#mediasaver-webext-toast.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#mediasaver-webext-toast span:nth-child(1) {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5em;
+}
+
+#mediasaver-webext-toast span:nth-child(2) {
+  font-size: small;
+  color: aliceblue;
+  opacity: 0.8;
+}
+
+#mediasaver-webext-toast a {
+  color: aliceblue;
+}
+
+#mediasaver-webext-toast a:hover {
+  text-decoration: underline;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 4em;
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 4em;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeout {
+  from {
+    top: 4em;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 4em;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
