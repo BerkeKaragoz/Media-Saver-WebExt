@@ -32,7 +32,9 @@ chrome.storage.sync.get("savedMedia", ({ savedMedia }) => {
   for (const th of theads)
     savedMediaTheadTr.insertCell(-1).outerHTML = `<th>${th}</th>`;
 
-  const vBlob = new Blob(mediaArr, { type: "octet/stream" });
+  const vBlob = new Blob([JSON.stringify(mediaArr)], {
+    type: "application/json",
+  });
 
   downloadSavedEl.setAttribute("href", window.URL.createObjectURL(vBlob));
   downloadSavedEl.setAttribute(
